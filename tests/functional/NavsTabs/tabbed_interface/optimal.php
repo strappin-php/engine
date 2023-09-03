@@ -8,12 +8,12 @@ use StrappinPhp\Engine\Factory;
 echo Factory::create()->createTabbedInterface([
     'panels' => [
         [
-            'action' => 'bs:toggle?object=tab&target=easy-way-tab-pane-1',
+            'action' => 'bs:toggle?object=tab&target=optimal-tab-pane-1',
             'label' => 'Tab-Pane 1 Label',
             'content' => 'Tab-pane 1 content.',
         ],
         [
-            'action' => 'bs:toggle?object=tab&target=easy-way-tab-pane-2',
+            'action' => 'bs:toggle?object=tab&target=optimal-tab-pane-2',
             'label' => 'Tab-Pane 2 Label',
             'content' => 'Tab-pane 2 content.',
         ],

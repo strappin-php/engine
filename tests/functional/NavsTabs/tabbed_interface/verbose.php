@@ -14,15 +14,15 @@ $htmlHelper = new HtmlHelper();
 echo (new Nav($htmlHelper, Nav::SUBTYPE_TABS))
     ->addChild(new NavItem(
         $htmlHelper,
-        'longer-way-tab-1',
-        'bs:toggle?object=tab&target=longer-way-tab-pane-1',
+        'verbose-tab-1',
+        'bs:toggle?object=tab&target=verbose-tab-pane-1',
         'Tab-Pane 1 Label',
         true
     ))
     ->addChild(new NavItem(
         $htmlHelper,
-        'longer-way-tab-2',
-        'bs:toggle?object=tab&target=longer-way-tab-pane-2',
+        'verbose-tab-2',
+        'bs:toggle?object=tab&target=verbose-tab-pane-2',
         'Tab-Pane 2 Label'
     ))
     ->addChild(new NavItem(
@@ -37,15 +37,15 @@ echo (new Nav($htmlHelper, Nav::SUBTYPE_TABS))
 echo (new TabContent($htmlHelper))
     ->addChild(new TabPane(
         $htmlHelper,
-        'longer-way-tab-pane-1',
-        'longer-way-tab-1',
+        'verbose-tab-pane-1',
+        'verbose-tab-1',
         'Tab-pane 1 content.',
         true
     ))
     ->addChild(new TabPane(
         $htmlHelper,
-        'longer-way-tab-pane-2',
-        'longer-way-tab-2',
+        'verbose-tab-pane-2',
+        'verbose-tab-2',
         'Tab-pane 2 content.'
     ))
 ;

@@ -59,15 +59,15 @@ $heading = 'Functional Tests';
                                 class="accordion-button"
                                 type="button"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#tabbed-interface__easy-way"
+                                data-bs-target="#tabbed-interface__optimal"
                                 aria-expanded="true"
-                                aria-controls="tabbed-interface__easy-way"
-                            >The Easy Way</button>
+                                aria-controls="tabbed-interface__optimal"
+                            >Optimal</button>
                         </h4>
 
-                        <div id="tabbed-interface__easy-way" class="accordion-collapse collapse show" data-bs-parent="#example-tabbed-interface">
+                        <div id="tabbed-interface__optimal" class="accordion-collapse collapse show" data-bs-parent="#example-tabbed-interface">
                             <div class="accordion-body">
-                                <?= execTest(__DIR__ . '/NavsTabs/the_easy_way.php') ?>
+                                <?= execTest(__DIR__ . '/NavsTabs/tabbed_interface/optimal.php') ?>
                             </div>
                         </div>
                     </div>
@@ -78,15 +78,15 @@ $heading = 'Functional Tests';
                                 class="accordion-button collapsed"
                                 type="button"
                                 data-bs-toggle="collapse"
-                                data-bs-target="#tabbed-interface__longer-way"
+                                data-bs-target="#tabbed-interface__verbose"
                                 aria-expanded="false"
-                                aria-controls="tabbed-interface__longer-way"
-                            >The Longer Way</button>
+                                aria-controls="tabbed-interface__verbose"
+                            >Verbose</button>
                         </h4>
 
-                        <div id="tabbed-interface__longer-way" class="accordion-collapse collapse" data-bs-parent="#example-tabbed-interface">
+                        <div id="tabbed-interface__verbose" class="accordion-collapse collapse" data-bs-parent="#example-tabbed-interface">
                             <div class="accordion-body">
-                                <?= execTest(__DIR__ . '/NavsTabs/the_longer_way.php') ?>
+                                <?= execTest(__DIR__ . '/NavsTabs/tabbed_interface/verbose.php') ?>
                             </div>
                         </div>
                     </div>
