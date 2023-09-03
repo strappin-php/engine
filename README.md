@@ -1,6 +1,6 @@
 # Strappin' 💪
 
-[Bootstrap](https://getbootstrap.com/) is super awesome for quickly building easy-to-use&mdash;and easy-on-the-eyes&mdash;Web interfaces, but things can quickly become very, very fiddly.  We really appreciate their consideration of accessibility and semantics, but that necessarily comes with a lot of words and a lot of wires.
+[Bootstrap](https://getbootstrap.com/) is super awesome for quickly building easy-to-use&mdash;and easy-on-the-eyes&mdash;Web interfaces, but things can quickly become very, very fiddly.  We really appreciate the Bootstrap team's consideration of accessibility and semantics, but that necessarily comes with a lot of words and a lot of wiring.
 
 Strappin' is a growing collection of PHP classes, and&mdash;crucially&mdash;a factory, that makes creating Bootstrap markup quicker and easier.  Its power is in joining things up so you can stop worrying about IDs, roles, and `aria-this`~`aria-that`.
 
