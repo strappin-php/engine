@@ -14,7 +14,7 @@ use const true;
 
 /**
  * @phpstan-import-type PropsArray from AbstractComponent
- * @phpstan-import-type AttributesArray from \StrappinPhp\Engine\HtmlHelper
+ * @phpstan-import-type AttributesArray from HtmlHelper
  */
 class TabPaneTest extends AbstractTestCase
 {
@@ -24,7 +24,7 @@ class TabPaneTest extends AbstractTestCase
     }
 
     /** @return array<mixed[]> */
-    public function providesNavPropsAndAttrs(): array
+    public function providesTabPanePropsAndAttrs(): array
     {
         $htmlHelper = new HtmlHelper();
 
@@ -61,7 +61,7 @@ class TabPaneTest extends AbstractTestCase
     }
 
     /**
-     * @dataProvider providesNavPropsAndAttrs
+     * @dataProvider providesTabPanePropsAndAttrs
      * @phpstan-param PropsArray $expectedProps
      * @phpstan-param AttributesArray $expectedAttrs
      */

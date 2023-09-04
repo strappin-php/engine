@@ -14,7 +14,7 @@ use const null;
 
 /**
  * @phpstan-import-type PropsArray from AbstractComponent
- * @phpstan-import-type AttributesArray from \StrappinPhp\Engine\HtmlHelper
+ * @phpstan-import-type AttributesArray from HtmlHelper
  */
 class NavTest extends AbstractTestCase
 {

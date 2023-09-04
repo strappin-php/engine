@@ -40,6 +40,11 @@ $heading = 'Functional Tests';
                             <nav class="nav nav-pills flex-column">
                                 <a class="nav-link ms-3 my-1" href="#tabbed-interface">Tabbed Interface</a>
                             </nav>
+
+                            <a class="nav-link" href="#accordion">Accordion</a>
+                            <nav class="nav nav-pills flex-column">
+                                <a class="nav-link ms-3 my-1" href="#complete-accordion">Complete Accordion</a>
+                            </nav>
                         </nav>
                     </nav>
                 </div>
@@ -52,45 +57,18 @@ $heading = 'Functional Tests';
 
                 <h3 id="tabbed-interface">Tabbed Interface</h3>
 
-                <div class="accordion" id="example-tabbed-interface">
-                    <div class="accordion-item func-test">
-                        <h4 class="accordion-header">
-                            <button
-                                class="accordion-button"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#tabbed-interface__optimal"
-                                aria-expanded="true"
-                                aria-controls="tabbed-interface__optimal"
-                            >Optimal</button>
-                        </h4>
+                <?= execTests([
+                    __DIR__ . '/NavsTabs/tabbed_interface/optimal.php',
+                    __DIR__ . '/NavsTabs/tabbed_interface/verbose.php',
+                ]) ?>
 
-                        <div id="tabbed-interface__optimal" class="accordion-collapse collapse show" data-bs-parent="#example-tabbed-interface">
-                            <div class="accordion-body">
-                                <?= execTest(__DIR__ . '/NavsTabs/tabbed_interface/optimal.php') ?>
-                            </div>
-                        </div>
-                    </div>
+                <h2 id="accordion">Accordion</h2>
 
-                    <div class="accordion-item func-test">
-                        <h4 class="accordion-header">
-                            <button
-                                class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#tabbed-interface__verbose"
-                                aria-expanded="false"
-                                aria-controls="tabbed-interface__verbose"
-                            >Verbose</button>
-                        </h4>
+                <h3 id="complete-accordion">Complete Accordion</h3>
 
-                        <div id="tabbed-interface__verbose" class="accordion-collapse collapse" data-bs-parent="#example-tabbed-interface">
-                            <div class="accordion-body">
-                                <?= execTest(__DIR__ . '/NavsTabs/tabbed_interface/verbose.php') ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?= execTests([
+                    __DIR__ . '/Accordion/complete_accordion/optimal.php',
+                ]) ?>
 
             </div>
         </div>

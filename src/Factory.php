@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace StrappinPhp\Engine;
 
+use StrappinPhp\Engine\Accordion\Accordion;
+use StrappinPhp\Engine\Accordion\AccordionItem;
 use StrappinPhp\Engine\NavsTabs\Nav;
 use StrappinPhp\Engine\NavsTabs\NavItem;
 use StrappinPhp\Engine\NavsTabs\TabbedInterface;
@@ -16,6 +18,8 @@ use const true;
 /**
  * @phpstan-type PanelConfig array{tabId?:string,action:string,label:string,content?:string}
  * @phpstan-type TabbedInterfaceConfig array{panels:PanelConfig[]}
+ * @phpstan-type AccordionSectionConfig array{collapseId?:string,headerText:string,bodyContent:string}
+ * @phpstan-type CompleteAccordionConfig array{id?:string,sections:AccordionSectionConfig[]}
  */
 class Factory
 {
@@ -84,6 +88,41 @@ class Factory
         }
 
         return new TabbedInterface($htmlHelper, $nav, $tabContent);
+    }
+
+    /**
+     * @phpstan-param CompleteAccordionConfig $config
+     */
+    public function createCompleteAccordion(array $config): Accordion
+    {
+        $htmlHelper = new HtmlHelper();
+
+        $parentId = $config['id']
+            ?? $htmlHelper->createUniqueName()
+        ;
+
+        $accordion = new Accordion($htmlHelper, $parentId);
+
+        $show = true;
+
+        foreach ($config['sections'] as $section) {
+            $collapseId = $section['collapseId']
+                ?? $htmlHelper->createUniqueName()
+            ;
+
+            $accordion->addChild(new AccordionItem(
+                $htmlHelper,
+                $parentId,
+                $section['headerText'],
+                $section['bodyContent'],
+                $show,
+                $collapseId
+            ));
+
+            $show = false;
+        }
+
+        return $accordion;
     }
 
     private function setHtmlHelper(HtmlHelper $htmlHelper): self

@@ -10,8 +10,7 @@ use StrappinPhp\Engine\NavsTabs\TabPane;
 
 $htmlHelper = new HtmlHelper();
 
-// phpcs:ignore
-echo (new Nav($htmlHelper, Nav::SUBTYPE_TABS))
+$nav = (new Nav($htmlHelper, Nav::SUBTYPE_TABS))
     ->addChild(new NavItem(
         $htmlHelper,
         'verbose-tab-1',
@@ -33,8 +32,7 @@ echo (new Nav($htmlHelper, Nav::SUBTYPE_TABS))
     ))
 ;
 
-// phpcs:ignore
-echo (new TabContent($htmlHelper))
+$tabContent = (new TabContent($htmlHelper))
     ->addChild(new TabPane(
         $htmlHelper,
         'verbose-tab-pane-1',
@@ -49,3 +47,6 @@ echo (new TabContent($htmlHelper))
         'Tab-pane 2 content.'
     ))
 ;
+
+// phpcs:ignore
+echo "{$nav}{$tabContent}";

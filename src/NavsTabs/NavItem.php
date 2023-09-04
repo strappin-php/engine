@@ -100,6 +100,8 @@ class NavItem extends AbstractComponent
             'aria-current' => $this->prop('active') ? 'page' : null,
         ]), $textLabel);
 
-        return $htmlHelper->createElement('li', ['class' => 'nav-item'], "\n{$anchor}\n");
+        return $htmlHelper->createElement('li', [
+            'class' => 'nav-item',
+        ], "\n{$anchor}\n");
     }
 }

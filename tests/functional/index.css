@@ -2,7 +2,11 @@ html {
     font-size: 14px;
 }
 
-.func-test.accordion-item .accordion-body {
+.func-test-group {
+    margin-bottom: 1rem;
+}
+
+.func-test-group > .accordion-item > .accordion-collapse > .accordion-body {
     padding: 0;
 }
 

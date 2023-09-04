@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 use StrappinPhp\Engine\Factory;
 
-// phpcs:ignore
-echo Factory::create()->createTabbedInterface([
+$tabbedInterface = Factory::create()->createTabbedInterface([
     'panels' => [
         [
             'action' => 'bs:toggle?object=tab&target=optimal-tab-pane-1',
@@ -23,3 +22,6 @@ echo Factory::create()->createTabbedInterface([
         ],
     ],
 ]);
+
+// phpcs:ignore
+echo $tabbedInterface;
