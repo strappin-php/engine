@@ -42,9 +42,6 @@ $heading = 'Functional Tests';
                             </nav>
 
                             <a class="nav-link" href="#accordion">Accordion</a>
-                            <nav class="nav nav-pills flex-column">
-                                <a class="nav-link ms-3 my-1" href="#complete-accordion">Complete Accordion</a>
-                            </nav>
                         </nav>
                     </nav>
                 </div>
@@ -64,10 +61,9 @@ $heading = 'Functional Tests';
 
                 <h2 id="accordion">Accordion</h2>
 
-                <h3 id="complete-accordion">Complete Accordion</h3>
-
                 <?= execTests([
                     __DIR__ . '/Accordion/complete_accordion/optimal.php',
+                    __DIR__ . '/Accordion/complete_accordion/verbose.php',
                 ]) ?>
 
             </div>

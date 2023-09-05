@@ -37,7 +37,7 @@ function execTests(array $sourceFilePathnames): string
         ];
     }
 
-    $accordion = (new Factory(new HtmlHelper()))->createCompleteAccordion([
+    $accordion = Factory::create()->createCompleteAccordion([
         'sections' => $sections,
     ]);
 

@@ -3,9 +3,8 @@
 declare(strict_types=1);
 
 use StrappinPhp\Engine\Factory;
-use StrappinPhp\Engine\HtmlHelper;
 
-$completeAccordion = (new Factory(new HtmlHelper()))->createCompleteAccordion([
+$completeAccordion = Factory::create()->createCompleteAccordion([
     'sections' => [
         [
             'headerText' => 'Section 1 Heading',
